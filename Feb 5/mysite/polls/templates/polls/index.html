@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if lq %}
+<ul>
+    {% for question in lq %}
+        <li><a href="/polls/{{question.id}}"><b>{{question.question_text}}</b></a></li>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>u have any questions</p>
+{% endif %}
+
+</body>
+</html>
